@@ -1,0 +1,16 @@
+{
+    "contents" : "library(foreign)\nlibrary(plyr)\nlibrary(maps)\nlibrary(choroplethr)\nlibrary(gridExtra)\nlibrary(ggplot2)\nlibrary(devtools)\ninstall_github(\"choroplethr\", \"trulia\")\n# running version 1.2\n\n#http://www.thearda.com/download/download.aspx?file=U.S.%20Religion%20Cens\nurl = \"http://www.thearda.com/download/download.aspx?file=U.S.%20Religion%20Census%20Religious%20Congregations%20and%20Membership%20Study,%202010%20(County%20File).DTA\"\nrelig <- read.dta(url)\n# this gets a trimmed master description file to use as a look tool\ndesc <- read.csv(\"/Users/ak/Data/religion/orthodox_codes.csv\", sep=\",\", header=TRUE)\n\n# reli <- read.dta(\"/Users/ak/Data/Religion.DTA\")\n# this data grabs the total count for orthodox churchs definitions found in religion.TXT\northodox <- c(16, 17, 18, 562, 563, 564, 565, 566, 567, 568)\n# this show the total views of all orthodox churches cannonical or not in the survey from religion.TXT\northodoxAll <- c(16, 17, 18, 29, 30, 31, 49, 50, 51, 57, 58, 59, 113, 114, 115, 222, 223, 224, 235, 236, 237, 238, 291, 292, 293,\n              296, 297, 298, 314, 315, 316, 347, 348, 349, 350, 351, 352, 353, 354, 355, 420, 421, 422, 429, 430, 431,\n              480, 481, 482, 483, 484, 485, 492, 493, 494, 508, 509, 510, 518, 519, 520, 547, 548, 549, 564, 565, 566, 567, 568)\nevang <- c(4,  562, 563, 564, 565, 566, 567, 568)\nak_list =  c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 562, 563, 564, 565, 566, 567, 568)\nstate <-  c(\"AK\" , \"OR\", \"WA\", \"ID\", \"CA\", \"MT\", \"UT\", \"LA\", \"WY\")\n# change the list here for total or summary files\nreli <- relig[, orthodox]\nreli <- relig[, evang]\nreli <- subset(reli, !(reli$stabbr %in% c(\"AK\", \"HI\")))\n\n# this is for getting all counties with an orthodox church\nreli <- reli[complete.cases(reli$orthcng),]\nreli <- reli[ order(-reli$POP2010), ]\n\n# this is for getting all counties without an orthodox church\n# reli <- reli[!complete.cases(relig$orthcng), ]\n# reli <- reli[ order(-reli$POP2010), ]\n# reli <- subset(reli, stabbr %in% state)\n\n#test <- subset(reli, stabbr == \"WA\")\nreli$value <- reli$orthcng\nreli$value <- reli$evancng\nreli$region <- reli$fips\nstate_view = c(\"LA\", \"MS\", \"AL\", \"AR\",\"GA\", \"TX\", \"OK\", \"TN\", \"FL\", \"SC\", \"NC\")\n# map using choroplethr\north <- choroplethr(reli, \"county\", num_buckets=8, title=\"Eastern Orthodox Congregations in South by County 2010\" , states=state_view)\nevang <- choroplethr(reli, \"county\", num_buckets=8, title=\"Evangelical Protestant Congregations in South by County 2010\" , states=state_view)\n\ngrid.arrange(orth, evang, nrow=1, ncol=2)\n\n# create funciton to sumrows\nrsum <- function (x) rowsum(x, na.rm=T, group=orth.fc)\northcng.st <- rsum(reli$orthcng)\n",
+    "created" : 1394833238434.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1932750002",
+    "id" : "F092A7F7",
+    "lastKnownWriteTime" : 1396401812,
+    "path" : "~/Dev/r/maps/Religious study.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

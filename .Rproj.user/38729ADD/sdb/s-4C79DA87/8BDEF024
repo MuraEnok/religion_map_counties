@@ -1,0 +1,17 @@
+{
+    "contents" : "# script for querying the religious census and creating a map \nlibrary(foreign)\nlibrary(devtools) # load the latest version of Ari's package\ninstall_github(\"choroplethr\", \"trulia\")\nlibrary(choroplethr)\nlibrary(ggplot2) # this seems to help choroplethr run better\nlibrary(dplyr) # this is becoming my goto data processing tool though I miss proc sql;\n\n#http://www.thearda.com/download/download.aspx?file=U.S.%20Religion%20Cens\nurl = \"http://www.thearda.com/download/download.aspx?file=U.S.%20Religion%20Census%20Religious%20Congregations%20and%20Membership%20Study,%202010%20(County%20File).DTA\"\nrelig <- read.dta(url)\n\n# this data grabs the total count for orthodox churchs definitions found in religion.TXT\northodox <- c(16, 17, 18, 562, 563, 564, 565, 566, 567, 568)\n\n# this trims the dataset, removes the na, orders by most population counties and changes the names for choroplethr mapping\nreli <- select(relig, orthodox) %.%\n       # filter(!( stabbr %in% c(\"AK\", \"HI\"))) %.% # newer version has AK & HI inset nice\n        filter(complete.cases(orthcng)) %.%\n        arrange(-POP2010) %.%\n        mutate(region = fips, value = orthcng )\n\n# map using choroplethr \n choroplethr(reli, \"county\", num_buckets=8, title=\"Eastern Orthodox Congregations by County 2010\")\n",
+    "created" : 1402336946892.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3685806482",
+    "id" : "8BDEF024",
+    "lastKnownWriteTime" : 1402339126,
+    "path" : "~/Data/religion/Orthodox US county map.R",
+    "project_path" : "Orthodox US county map.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

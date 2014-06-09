@@ -1,0 +1,65 @@
+description,description_long
+16) ORTHCNG,Orthodox--Total number of congregations (2010)
+17) ORTHADH,Orthodox--Total number of adherents (2010)
+18) ORTHRATE,"Orthodox--Rates of adherence per 1,000 population (2010)"
+29) ALBCNG,Albanian Orthodox Diocese of America--Total number of congregations (2010)
+30) ALBADH,Albanian Orthodox Diocese of America--Total number of adherents (2010)
+31) ALBRATE,"Albanian Orthodox Diocese of America--Rates of adherence per 1,000 population (2010)"
+49) ACROCNG,American Carpatho-Russian Orthodox Diocese--Total number of congregations (2010)
+50) ACROADH,American Carpatho-Russian Orthodox Diocese--Total number of adherents (2010)
+51) ACRORATE,"American Carpatho-Russian Orthodox Diocese--Rates of adherence per 1,000 population (2010)"
+57) AOCACNG,Antiochian Orthodox Christian Archdiocese of North America--Total number of congregations (2010)
+58) AOCAADH,Antiochian Orthodox Christian Archdiocese of North America--Total number of adherents (2010)
+59) AOCARATE,"Antiochian Orthodox Christian Archdiocese of North America--Rates of adherence per 1,000 population (2010)"
+113) BULGCNG,"Bulgarian Eastern Orthodox Diocese of the USA, Canada and Australia--Total number of congregations (2010)"
+114) BULGADH,"Bulgarian Eastern Orthodox Diocese of the USA, Canada and Australia--Total number of adherents (2010)"
+115) BULGRATE,"Bulgarian Eastern Orthodox Diocese of the USA, Canada and Australia--Rates of adherence per 1,000 population (2010)"
+222) COPTCNG,Coptic Orthodox Church--Total number of congregations (2010)
+223) COPTADH,Coptic Orthodox Church--Total number of adherents (2010)
+224) COPTRATE,"Coptic Orthodox Church--Rates of adherence per 1,000 population (2010)"
+235) EOCNG,Eritrean Orthodox--Total number of congregations (2010)
+236) EOADH,Eritrean Orthodox--Total number of adherents (2010)
+237) EORATE,"Eritrean Orthodox--Rates of adherence per 1,000 population (2010)"
+238) ETHOCNG,Ethiopian Orthodox--Total number of congregations (2010)
+291) GOPCNG,Georgian Orthodox Parishes in the United States--Total number of congregations (2010)
+292) GOPADH,Georgian Orthodox Parishes in the United States--Total number of adherents (2010)
+293) GOPRATE,"Georgian Orthodox Parishes in the United States--Rates of adherence per 1,000 population (2010)"
+296) GRKCNG,Greek Orthodox Archdiocese of America--Total number of congregations (2010)
+297) GRKADH,Greek Orthodox Archdiocese of America--Total number of adherents (2010)
+298) GRKRATE,"Greek Orthodox Archdiocese of America--Rates of adherence per 1,000 population (2010)"
+314) HOCCNG,Holy Orthodox Church in North America--Total number of congregations (2010)
+315) HOCADH,Holy Orthodox Church in North America--Total number of adherents (2010)
+316) HOCRATE,"Holy Orthodox Church in North America--Rates of adherence per 1,000 population (2010)"
+347) MOCCNG,Macedonian Orthodox Church: American Diocese--Total number of congregations (2010)
+348) MOCADH,Macedonian Orthodox Church: American Diocese--Total number of adherents (2010)
+349) MOCRATE,"Macedonian Orthodox Church: American Diocese--Rates of adherence per 1,000 population (2010)"
+350) MALACNG,Malankara Archdiocese of the Syrian Orthodox Church in North America--Total number of congregations (2010)
+351) MALAADH,Malankara Archdiocese of the Syrian Orthodox Church in North America--Total number of adherents (2010)
+352) MALARATE,"Malankara Archdiocese of the Syrian Orthodox Church in North America--Rates of adherence per 1,000 population (2010)"
+353) MOSCCNG,Malankara Orthodox Syrian Church--Total number of congregations (2010)
+354) MOSCADH,Malankara Orthodox Syrian Church--Total number of adherents (2010)
+355) MOSCRATE,"Malankara Orthodox Syrian Church--Rates of adherence per 1,000 population (2010)"
+420) OCACNG,Orthodox Church in America--Total number of congregations (2010)
+421) OCAADH,Orthodox Church in America--Total number of adherents (2010)
+422) OCARATE,"Orthodox Church in America--Rates of adherence per 1,000 population (2010)"
+429) ROCCNG,Patriarchal Parishes of the Russian Orthodox Church in the USA--Total number of congregations (2010)
+430) ROCADH,Patriarchal Parishes of the Russian Orthodox Church in the USA--Total number of adherents (2010)
+431) ROCRATE,"Patriarchal Parishes of the Russian Orthodox Church in the USA--Rates of adherence per 1,000 population (2010)"
+480) ROAACNG,Romanian Orthodox Archdiocese in the Americas--Total number of congregations (2010)
+481) ROAAADH,Romanian Orthodox Archdiocese in the Americas--Total number of adherents (2010)
+482) ROAARATE,"Romanian Orthodox Archdiocese in the Americas--Rates of adherence per 1,000 population (2010)"
+483) ROORCNG,Russian Orthodox Church Outside of Russia--Total number of congregations (2010)
+484) ROORADH,Russian Orthodox Church Outside of Russia--Total number of adherents (2010)
+485) ROORRATE,"Russian Orthodox Church Outside of Russia--Rates of adherence per 1,000 population (2010)"
+492) SERBCNG,Serbian Orthodox Church in North America--Total number of congregations (2010)
+493) SERBADH,Serbian Orthodox Church in North America--Total number of adherents (2010)
+494) SERBRATE,"Serbian Orthodox Church in North America--Rates of adherence per 1,000 population (2010)"
+508) SOCACNG,Syriac Orthodox Church of Antioch--Total number of congregations (2010)
+509) SOCAADH,Syriac Orthodox Church of Antioch--Total number of adherents (2010)
+510) SOCARATE,"Syriac Orthodox Church of Antioch--Rates of adherence per 1,000 population (2010)"
+518) UOCCNG,Ukrainian Orthodox Church of the USA--Total number of congregations (2010)
+519) UOCADH,Ukrainian Orthodox Church of the USA--Total number of adherents (2010)
+520) UOCRATE,"Ukrainian Orthodox Church of the USA--Rates of adherence per 1,000 population (2010)"
+547) PJOCCNG,Vicariate for the Palestinian/Jordanian Orthodox Christian Communities--Total number of congregations (2010)
+548) PJOCADH,Vicariate for the Palestinian/Jordanian Orthodox Christian Communities--Total number of adherents (2010)
+549) PJOCRATE,"Vicariate for the Palestinian/Jordanian Orthodox Christian Communities--Rates of adherence per 1,000 population (2010)"
