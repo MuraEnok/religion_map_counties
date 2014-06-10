@@ -1,0 +1,38 @@
+Us County Map and Eastern Orthodox Parishes
+========================================================
+
+The religious census from www.thearda.com provides a detailed view by us counties of the number of congregations and people belonging to varis types of worship.  As an Orthodox priest, I find this most interesting to see how few Eastern Orthodox parishes there are in the US and when there is a collection of parishes it tends to be centered in urban area with large foriegn populations.  In other words, parishes tend to be renewed by multiple waves of immigration from Europe.  
+
+The below script will create a choropleth map of US counties with a scaled count of parishes.  The black counties mean that there is no Eastern Orthodox parish in that county as of the 2010 relgious census.
+
+```{r}
+
+# script for querying the religious census and creating a map 
+library(foreign)
+library(devtools) # load the latest version of Ari's package
+install_github("choroplethr", "trulia")
+library(choroplethr)
+library(ggplot2) # this seems to help choroplethr run better
+library(dplyr) # this is becoming my goto data processing tool though I miss proc sql;
+
+#http://www.thearda.com/download/download.aspx?file=U.S.%20Religion%20Cens
+url = "http://www.thearda.com/download/download.aspx?file=U.S.%20Religion%20Census%20Religious%20Congregations%20and%20Membership%20Study,%202010%20(County%20File).DTA"
+relig <- read.dta(url)
+```
+This vector contains the numeric value of the columns for needed values.  I am trimming the original data as it comes with 568 variables and is not practical for working with.  If you want to create a different map you will need to do a subset of the columnes for say Nazarine or Methododist.
+```{r}
+# this data grabs the total count for orthodox churchs definitions found in religion.TXT
+orthodox <- c(16, 17, 18, 562, 563, 564, 565, 566, 567, 568)
+
+# this trims the dataset, removes the na, orders by most population counties and changes the names for choroplethr mapping
+reli <- select(relig, orthodox) %.%
+       # filter(!( stabbr %in% c("AK", "HI"))) %.% # newer version has AK & HI inset nice
+        filter(complete.cases(orthcng)) %.%
+        arrange(-POP2010) %.%
+        mutate(region = fips, value = orthcng )
+
+# map using choroplethr 
+ choroplethr(reli, "county", num_buckets=8, title="Eastern Orthodox Congregations by County 2010")
+
+```
+
